@@ -206,6 +206,25 @@ gsap.to(section, {
 
 
 </script>
+<script>
+    // Wait for fonts to load
+    document.fonts.load("400 4rem 'Impact'")
+      .then(() => document.fonts.check("400 4rem 'Impact'"))
+      .then((hasImpact) => {
+        if (hasImpact) {
+          // Font is available — add the shadow and stroke
+          document.body.classList.add('font-loaded');
+          // Or add class to specific elements
+          document.querySelectorAll('.fancy-text').forEach(el => {
+            el.classList.add('font-loaded');
+          });
+        }
+      })
+      .catch(() => {
+        // Font failed to load or check error — do nothing (fallback style remains)
+        console.log("Impact not available, using fallback without shadow/stroke");
+      });
+      </script>
 
     </body>
 </html>

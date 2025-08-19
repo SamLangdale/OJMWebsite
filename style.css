@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-shadow: 2px 2px 5px black;
-    -webkit-text-stroke-width: .5px;
-    -webkit-text-stroke-color: black;
+    
    
 }
 #mobleimage{
@@ -309,7 +307,11 @@ nav{
     border-radius: 6px;
 
 }
-
+.font-loaded {
+      text-shadow: 2px 2px 5px black;
+      -webkit-text-stroke-width: 0.5px;
+      -webkit-text-stroke-color: black;
+    }
 
 
 
@@ -403,17 +405,7 @@ nav{
     align-items: center;
     margin: 20%;
   }
-  @media only screen and (max-width: 900px) {
-    .logo{
-        display: none;
-    }
-     #mobleimage{
-        align-items: center;
-        display:inline;
-        width: 40%;
-    }
-
-  }
+ 
 
     
   
