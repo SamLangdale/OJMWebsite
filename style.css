@@ -299,9 +299,9 @@ nav{
 
 }
 #msg{
-     text-shadow: none;
-    -webkit-text-stroke-width: 0px;
-    font-family: 'Poppins', sans-serif;
+    text-shadow: none;
+    text-align: center;
+
     width: 15%;
     padding: 10px;
     margin: 15px 0;
@@ -318,7 +318,7 @@ nav{
     display: none;
     
   }
-  @media only screen and (max-width:600px){
+  @media only screen and (max-width:900px){
     #mobleimage{
         align-items: center;
         display:inline;
@@ -330,7 +330,7 @@ nav{
         
     }
     .header-text {
-        margin-top: 100%;
+        margin-top: 25%;
         font-size: 15px;
     }
     .header-text h1 {
@@ -397,6 +397,22 @@ nav{
     align-items: center;
     width: 75%;
     margin: 10%;
+  }
+  #msg{
+    display: inline;
+    align-items: center;
+    margin: 20%;
+  }
+  @media only screen and (max-width: 900px) {
+    .logo{
+        display: none;
+    }
+     #mobleimage{
+        align-items: center;
+        display:inline;
+        width: 40%;
+    }
+
   }
 
     
