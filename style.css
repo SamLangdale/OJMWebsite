@@ -6,6 +6,18 @@
     
    
 }
+body, .fancy-text {
+  font-family: Impact, "Arial Black", sans-serif;
+}
+
+/* Only add effects when Impact confirmed */
+.font-loaded {
+  text-shadow: 2px 2px 5px black;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
+
 #mobleimage{
     display: none;
     text-align: center;
@@ -307,13 +319,6 @@ nav{
     border-radius: 6px;
 
 }
-.font-loaded {
-      text-shadow: 2px 2px 5px black;
-      -webkit-text-stroke-width: 0.5px;
-      -webkit-text-stroke-color: black;
-    }
-
-
 
   /* ------------------css for small ------------------- */
   nav .fa-solid{
