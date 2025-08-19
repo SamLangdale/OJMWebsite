@@ -389,8 +389,14 @@ nav{
   form input, form textarea{
     width: 75%;
     display: inline;
-    margin-left: 20px;
+    margin-left: 10%;
     align-items: center;
+  }
+  button{
+    display: inline;
+    align-items: center;
+    width: 75%;
+    margin: 10%;
   }
 
     
