@@ -324,7 +324,6 @@ nav{
     }
     body{
         background-image: url(images/BandPhoto_small.jpg);
-        background-size:contain;
         background-attachment:fixed;
         
     }
@@ -345,7 +344,7 @@ nav{
   }
   nav ul{
     z-index: 2;
-    background: #ff69b4;
+    background: #00C7FF;
     position: fixed;
     top: 0;
     right: -200px;
