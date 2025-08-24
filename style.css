@@ -327,6 +327,11 @@ nav{
     display: none;
     
   }
+  @supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
+  }
+}
   @media only screen and (max-width:900px){
     #mobleimage{
         align-items: center;
@@ -336,7 +341,7 @@ nav{
     body{
         background-image: url(images/BandPhoto_small.jpg);
         background-attachment:fixed;
-        background-size: contain;
+        
         
     }
     .header-text {
