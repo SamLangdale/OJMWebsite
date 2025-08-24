@@ -336,6 +336,7 @@ nav{
     body{
         background-image: url(images/BandPhoto_small.jpg);
         background-attachment:fixed;
+        background-size: contain;
         
     }
     .header-text {
