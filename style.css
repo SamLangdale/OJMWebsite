@@ -490,9 +490,10 @@ nav{
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 25px;
+    font-size: clamp(18px, 2.3vw, 25px);
     margin-top: 30px;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    white-space: nowrap;
    }
 
    .contact-left i{
@@ -786,6 +787,8 @@ nav{
 
     .contact-left p{
         justify-content: center;
+        gap: 8px;
+        font-size: clamp(15px, 4.7vw, 22px);
     }
 
     .social-icons a{
