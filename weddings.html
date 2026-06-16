@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>Wedding Cocktail Hours | The OJM Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6a97e06091.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="font-loaded">
+<div class="page-header">
+    <div class="container">
+        <nav>
+            <a href="index.html"><img src="images/ojmExLogo_trans.png" class="logo" alt="The OJM Experience logo"></a>
+            <ul id="sidemenu">
+            <li><a href="index.html#header">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#music">Music</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="https://www.instagram.com/ojm.experience/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://youtube.com/channel/UCk2xRYSCjj4-mQZOOUxAcGg?si=Qb8_lS2TuShbg-dm"><i class="fa-brands fa-youtube"></i></a></li>
+             <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </div>
+</div>
+
+<div class="bgfixed">
+    <div class="bg"></div>
+</div>
+
+<main class="events-page">
+    <section class="events-hero">
+        <div class="container">
+            <h1>Wedding Cocktail Hours</h1>
+            <p>Warm jazz standards and requested tunes for ceremony transitions, cocktail hours, and elegant receptions.</p>
+        </div>
+    </section>
+
+    <section class="events-section">
+        <div class="container">
+            <div class="wedding-list">
+                <article class="wedding-entry">
+                    <div class="wedding-entry-text">
+                        <h2>Wedding Cocktail Hour</h2>
+                        <p>Laid-back jazz for the transition between ceremony and reception, with a relaxed sound that gives guests something beautiful to settle into.</p>
+                    </div>
+                    <div class="wedding-gallery">
+                        <img src="images/smallevent.jpg" alt="The OJM Experience performing at a wedding cocktail hour">
+                        <img src="images/edge.jpg" alt="The OJM Experience performing jazz music">
+                    </div>
+                </article>
+                <article class="wedding-entry">
+                    <div class="wedding-entry-text">
+                        <h2>Private Reception</h2>
+                        <p>Saxophone, guitar, and bass textures for intimate receptions, outdoor patios, and refined rooms where the music should feel warm but never overpowering.</p>
+                    </div>
+                    <div class="wedding-gallery">
+                        <img src="images/aboutus.jpg" alt="The OJM Experience duo portrait">
+                        <img src="images/IMG_4347.jpg" alt="The OJM Experience performing for a crowd">
+                    </div>
+                </article>
+                <article class="wedding-entry">
+                    <div class="wedding-entry-text">
+                        <h2>Requested Songs</h2>
+                        <p>Couples can send requests in advance so the set feels personal while still keeping the easy cocktail-hour atmosphere.</p>
+                    </div>
+                    <div class="wedding-gallery">
+                        <img src="images/edgenew.jpg" alt="The OJM Experience performing together">
+                        <img src="images/bandphoto.jpg" alt="The OJM Experience band photo">
+                    </div>
+                </article>
+            </div>
+            <a class="events-cta" href="index.html#contact">Ask about weddings</a>
+        </div>
+    </section>
+</main>
+
+<div class="copyright">
+    <p>Copyright The OJM Experience 2025. Why do your legs hurt on wednesday? Because leg day was Tuesday.</p>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    document.fonts.load("400 4rem 'Impact'")
+      .then(() => document.fonts.check("400 4rem 'Impact'"))
+      .then((hasImpact) => {
+        if (hasImpact) {
+          document.body.classList.add('font-loaded');
+        }
+      })
+      .catch(() => {
+        console.log("Impact not available, using fallback without shadow/stroke");
+      });
+</script>
+    </body>
+</html>

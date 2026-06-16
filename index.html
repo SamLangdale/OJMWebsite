@@ -12,6 +12,7 @@
 <div id="header">
     <div class="container">
         <nav>
+            <img src="images/ojmExLogo_trans.png" class="logo" alt="The OJM Experience logo">
             <ul id="sidemenu">
             <li><a href="#header">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -20,7 +21,6 @@
             <li><a href="#contact">Contact</a></li>
             <li><a href="https://www.instagram.com/ojm.experience/"><i class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://youtube.com/channel/UCk2xRYSCjj4-mQZOOUxAcGg?si=Qb8_lS2TuShbg-dm"><i class="fa-brands fa-youtube"></i></a></li>
-             <img src="images/ojmExLogo_trans.png" class="logo" width="160">
              <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -49,29 +49,21 @@
     </div>
 </div>
 
-<!--<div id="spotify">
-    <div class="row">
-        <div class="spotify-box">
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6t7n1X9frMXddt5jVoqnzr?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-    <div class="spotify-text">
-        <p>example</p>
-    </div>
---> </div>
-
     <div id="Members">
     <div class="container">
         <h1 class="sub-title">Members</h1>
         <div class="services-list">
-            <div>
+            <div class="service-card">
                 <h2>Sam Langdale</h2>
-                <img src="images/Sam_about.jpg" alt style="width: 50%; border-radius: 15px;">
-                <p>Played saxophone for more than 10 years. Senior at USC majoring in Computer Science</p>
+                <img src="images/Sam_about.jpg" alt="Sam Langdale playing saxophone">
+                <p>Sam Langdale has been playing saxophone for over 10 years. He graduated with his bachelors in Computer Science from the University of South Carolina but music
+                    is still his main focus in life.
+                </p>
                 
             </div>
-            <div>
+            <div class="service-card">
                 <h2>Isa Mendosa</h2>
-                <img src="images/ISA_about.jpg" alt style="width: 50%; border-radius: 15px; ">
+                <img src="images/ISA_about.jpg" alt="Isa Mendosa playing guitar">
                 <p>Played guitar/bass more than 7 years. Seinor at USC majoring in Music and Audio Recording </p>
                 
             </div>
@@ -84,18 +76,12 @@
     <div class="container">
         <h1 class="sub-title">Services</h1>
         <div class="services-list">
-            <div>
-                <h2>Small Events</h2>
-                <img src="images/Halloweenimage.jpg" alt style="width: 40%; border-radius: 15px;">
-                <p>We have played for multiple small events including the festivals, fundraisers, Block parties, and more.</p>
-                
-            </div>
-            <div>
-                <h2>Wedding Cocktail Hours</h2>
-                <img src="images/smallevent.jpg" alt style="width: 65%; border-radius: 15px; ">
-                <p>If you are looking for an aesthetic and atmospheric jazz cocktail hour we are the band for you. We also take requests in advance if you have a particular tune you want to hear.</p>
-                
-            </div>
+            <a class="service-card" href="events.html">
+                <h2>Events</h2>
+                <img src="images/Halloweenimage.jpg" alt="The OJM Experience performing at a small event">
+                <p>We play festivals, fundraisers, block parties, private gatherings, and wedding cocktail hours with a jazz set that can fit the room.</p>
+                <span class="card-link">View events</span>
+            </a>
         </div>
 
 
@@ -105,23 +91,30 @@
     <div class="container">
         <h1 class="sub-title">Music</h1>
         <div class="music-list">
-        <div>
+        <a class="music-card" href="https://www.youtube.com/watch?v=DCJpvfEl2sw" target="_blank" rel="noopener noreferrer">
             <h2>Misty</h2>
-           <iframe width= 100% height=100% src="https://www.youtube.com/embed/DCJpvfEl2sw?si=AC4xrDBiDCGvM0FR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen alt style="border-radius: 15px;"></iframe>
-        </div>
-        <div>
+            <div class="video-frame">
+                <img src="https://img.youtube.com/vi/DCJpvfEl2sw/hqdefault.jpg" alt="Misty by The OJM Experience on YouTube">
+                <span class="play-badge"><i class="fa-brands fa-youtube"></i></span>
+            </div>
+            <span class="music-link">Watch on YouTube</span>
+        </a>
+        <a class="music-card" href="https://www.youtube.com/watch?v=Zd0OoRdeqvE" target="_blank" rel="noopener noreferrer">
             <h2>Stand By Me</h2>
-            <iframe width= 100% height=100% src="https://www.youtube.com/embed/Zd0OoRdeqvE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  alt style="border-radius: 15px;"></iframe>
-       </div>
-       <div>
-        <h1>more to come . . . . .</h1>
-        
-        
-
+            <div class="video-frame">
+                <img src="https://img.youtube.com/vi/Zd0OoRdeqvE/hqdefault.jpg" alt="Stand By Me by The OJM Experience on YouTube">
+                <span class="play-badge"><i class="fa-brands fa-youtube"></i></span>
+            </div>
+            <span class="music-link">Watch on YouTube</span>
+       </a>
+       <div class="music-card more-music">
+        <h2>More to come</h2>
        </div>
 </div>
+</div>
+</div>
 
-<div id="contact"></div>
+<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -135,10 +128,14 @@
                 <p></p>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hidden">
+                        <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
@@ -146,26 +143,30 @@
             </div>
         </div>
     </div>
-    </div>
 </div>
 
 <div class="copyright">
-    <p>Copyright The OJM Experience 2025. Why do your legs hurt on wednesday? Because leg day was Tuesday.</p>
+    <p>Copyright The OJM Experience 2025. </p>
 </div>
 
-</div>
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxjK61MKRtkxmdo_-Rs06vmd193iMG11DAmwvNwNLP5q_AGf5C9UMImhq1gKOJpaDSBGA/exec'
-  const form = document.forms['submit-to-google-sheet']
+  const form = document.forms['contact']
   const msg = document.getElementById("msg");
 
   form.addEventListener('submit', e => {
     e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+    })
       .then(response => {
-        msg.innerHTML = "Message Sent Successfully"
+        if (!response.ok) {
+            throw new Error("Form submission failed")
+        }
+        msg.innerHTML = "Message sent successfully!"
         setTimeout(function() {
-            msg.innerHTML = "message recieved successfully!";
+            msg.innerHTML = "";
         },5000)
         form.reset();
       })

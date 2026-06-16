@@ -43,15 +43,9 @@ body{
     background-position: center;
 }
 .container{
-    padding: 20px 2%;
-
-
-}
-.container iframe {
-    height: 120%;
-    width: 100%;
-
-
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 20px 4%;
 }
 nav{
         display: flex;
@@ -60,22 +54,27 @@ nav{
         flex-wrap: wrap;
     }
     .logo {
-        width: 20%;
-        position:absolute;
-        top: -50px;
-        right: 10px;
+        width: clamp(110px, 12vw, 160px);
+        height: auto;
+        display: block;
         
     }
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin-left: auto;
+    }
     nav ul li {
-        display: inline-block;
         list-style: none;
-        margin: 10px 20px;
+        margin: 0;
     }
     nav ul li a {
         color:#FFF;
         text-decoration: none;
-        font-size: 25px;
+        font-size: clamp(18px, 2vw, 25px);
         position: relative;
+        white-space: nowrap;
     }
     nav ul li a i {
         color:#ff69b4;
@@ -113,17 +112,25 @@ nav{
 
     }
     .row{
-        background-color: rgb(0, 0,0,.5);
+        background-color: rgb(0, 0, 0, 0.6);
         border-radius: 15px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+        padding: 40px;
     }
     .about-col-1{
         flex-basis: 35%;
     }
     .about-col-1 img {
+        display: block;
         width: 100%;
+        height: 100%;
+        min-height: 420px;
+        max-height: 560px;
+        object-fit: cover;
+        object-position: center;
         border-radius: 15px;
     }
     .about-col-2{
@@ -131,126 +138,403 @@ nav{
     }
     .about-col-2 h1{
         font-size: 50px;
-
+        color: #ff69b4;
+        margin-bottom: 20px;
     }
     .about-col-2 p {
         font-size: 30px;
+        line-height: 1.8;
     }
     #spotify {
         padding: 80px 30px;
     }
-    .row {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .spotify-box {
-        flex-basis: 30%;
-    }
 
    /* ---------- service --------------- */
-   #services{
-    padding: 30px 0;
-
+   #Members,
+   #services,
+   #music,
+   #contact{
+    padding: 40px 0;
    }
+   
    .sub-title{
     text-align: center;
     font-size: 40px;
+    color: #ff69b4;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
    }
+
    .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    align-items: stretch;
    }
-   .services-list div {
+
+   #services .services-list{
+    grid-template-columns: minmax(0, 640px);
+    justify-content: center;
+   }
+
+   .service-card {
     text-align: center;
     border-radius: 15px;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgb(0, 0, 0, 0.6);
     padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
    }
+   
+   .service-card:hover {
+    background-color: rgb(0, 0, 0, 0.75);
+    box-shadow: 0 12px 32px rgba(255, 105, 180, 0.4);
+    transform: translateY(-8px);
+    border-color: rgba(255, 105, 180, 0.5);
+   }
+
+   .card-link{
+    color: #ff69b4;
+    font-size: 18px;
+    margin-top: auto;
+    padding-top: 18px;
+   }
+
    .services-list h2{
     font-size: 40px;
+    margin-bottom: 15px;
+    color: #ff69b4;
    }
+
    .services-list p{
     font-size: 20px;
+    line-height: 1.6;
    }
-   .services-list img{
-    width: 50%;
-    
-   }
-   #music{
-    padding: 30px 5%;
-   }
-   .sub-title {
-    text-align: center;
 
+   .services-list img{
+    display: block;
+    border-radius: 15px;
+    margin: 15px auto;
+    object-fit: cover;
    }
+
+   #Members .services-list img{
+    width: min(78%, 280px);
+    height: clamp(300px, 34vw, 420px);
+    object-position: center top;
+   }
+
+   #services .services-list img{
+    width: min(100%, 360px);
+    max-width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: contain;
+    object-position: center;
+   }
+
+   /* ---------- music --------------- */
    .music-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
+    align-items: stretch;
    }
-   .music-list div{
+
+   .music-card{
     text-align: center;
-    border-radius: 25px;
-    background-color: rgb(0, 0, 0, 0.5);
-    padding: 15%;
-   }
-   .music-list div h2{
-    margin-top: -10%
-    
-   }
-   #contact{
-    margin-top: 50px;
-    background-color: rgb(0, 0,0,.5);
     border-radius: 15px;
-    display: flex;     
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background-color: rgb(0, 0, 0, 0.6);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: #fff;
+    text-decoration: none;
    }
+   
+   .music-card:hover {
+    background-color: rgb(0, 0, 0, 0.75);
+    box-shadow: 0 12px 32px rgba(255, 105, 180, 0.4);
+    transform: scale(1.05);
+    border-color: rgba(255, 105, 180, 0.5);
+   }
+
+   .music-card h2{
+    margin-top: 0;
+    color: #ff69b4;
+    margin-bottom: 15px;
+    line-height: 1.1;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+   }
+
+   .video-frame{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #080808;
+   }
+
+   .video-frame img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+   }
+
+   .music-card:hover .video-frame img{
+    transform: scale(1.04);
+   }
+
+   .play-badge{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 50px;
+    border-radius: 12px;
+    background: rgba(255, 105, 180, 0.92);
+    color: #080808;
+    font-size: 32px;
+    text-shadow: none;
+    -webkit-text-stroke-width: 0;
+    transform: translate(-50%, -50%);
+   }
+
+   .music-link{
+    color: #ff69b4;
+    font-size: 18px;
+    margin-top: auto;
+    padding-top: 18px;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px black;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+   }
+
+   .music-card:visited,
+   .music-card:hover,
+   .music-card:focus{
+    color: #fff;
+    text-decoration: none;
+   }
+
+   .more-music{
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+   }
+
+   /* ---------- events page --------------- */
+   .page-header{
+    padding: 10px 0;
+   }
+
+   .events-page{
+    min-height: 75vh;
+   }
+
+   .events-hero{
+    padding: 90px 0 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+   }
+
+   .events-hero h1{
+    color: #ff69b4;
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   }
+
+   .events-hero p{
+    font-size: 30px;
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.8;
+   }
+
+   .events-section{
+    padding: 20px 0 60px;
+   }
+
+   .events-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+   }
+
+   .event-card{
+    background-color: rgb(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+   }
+
+   .event-card img{
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+   }
+
+   .event-card div{
+    padding: 24px;
+   }
+
+   .event-card h2{
+    color: #ff69b4;
+    font-size: 40px;
+    margin-bottom: 15px;
+   }
+
+   .event-card p{
+    font-size: 20px;
+    line-height: 1.6;
+   }
+
+   .events-cta{
+    display: block;
+    width: fit-content;
+    margin: 36px auto 0;
+    border-radius: 6px;
+    background: #ff69b4;
+    color: #080808;
+    font-family: 'Poppins', sans-serif;
+    padding: 14px 18px;
+    text-decoration: none;
+    text-shadow: none;
+    -webkit-text-stroke-width: 0;
+   }
+
+   .wedding-list{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+   }
+
+   .wedding-entry{
+    background-color: rgb(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 105, 180, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+   }
+
+   .wedding-entry-text{
+    padding: 32px 32px 22px;
+    text-align: center;
+   }
+
+   .wedding-entry-text h2{
+    color: #ff69b4;
+    font-size: 40px;
+    margin-bottom: 15px;
+   }
+
+   .wedding-entry-text p{
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 850px;
+    margin: 0 auto;
+   }
+
+   .wedding-gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    padding: 0 24px 24px;
+   }
+
+   .wedding-gallery img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+   }
+
+   /* ---------- contact --------------- */
    .contact-left{
     flex-basis: 35%;
    }
+
    .contact-right{
-    
     flex-basis: 60%;
    }
+
    .contact-left p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 25px;
     margin-top: 30px;
-
+    overflow-wrap: anywhere;
    }
+
    .contact-left i{
-    margin-right: 15px;
-
+    flex: 0 0 28px;
+    margin-right: 0;
+    text-align: center;
    }
+
    .social-icons {
     margin-top: 30px;
    }
+
    .social-icons a{
     color: #ff69b4;
     text-decoration: none;
     font-size: 30px;
     display: inline-block;
     transition: transform 0.5s;
+    margin-right: 15px;
    }
+
    .social-icons a:hover{
     color:#fff;
     transform: translateY(-5px);
    }
+
    .btn.btn2{
     display: inline-block;
     background: #ff69b4;
    }
+
    .contact-right form{
     width: 100%;
    }
 
+   .hidden{
+    display: none;
+   }
+
    form input, form textarea{
     align-items: center;
-    display: inline;
+    display: block;
     -webkit-text-stroke-color: none;
     text-shadow: none;
     -webkit-text-stroke-width: 0px;
@@ -261,11 +545,10 @@ nav{
     border: 0;
     outline: none;
     padding: 15px;
-    margin: 15px -10px;
+    margin: 15px 0;
     border-radius: 6px;
-    
-    
    }
+
    button {
     text-shadow: none;
     -webkit-text-stroke-width: 0px;
@@ -273,18 +556,20 @@ nav{
     width: 15%;
     padding: 10px;
     margin: 15px 0;
-    margin-left: -10px;
     border-radius: 6px;
-
+    cursor: pointer;
    }
+
    input::placeholder {
     -webkit-text-stroke-width: 0px;
     font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 5px none;
    }
+
    form .btn2{
-    padding: 14px, 16px;
+    padding: 14px 16px;
    }
+
    .copyright{
     width:100%;
     text-align: center;
@@ -292,6 +577,7 @@ nav{
     font-weight: 300;
     margin-top: 20px;
    }
+
 /*------------------ bgfixed ----------------*/
 .bgfixed {
     z-index: -1;
@@ -301,6 +587,7 @@ nav{
     top: 0;
     bottom: 0;
 }
+
 .bgfixed .bg {
     position: absolute;
     top: 50%;
@@ -308,120 +595,207 @@ nav{
     height: 100%;
     background-image: linear-gradient(to top,rgb(0, 0, 0,.5),rgba(141, 126, 180, 0));
     transform: translate(-50%,-50%);
-
 }
+
 #msg{
     text-shadow: none;
     text-align: center;
-
     width: 15%;
     padding: 10px;
     margin: 15px 0;
-    margin-left: -10px;
     border-radius: 6px;
-
+    color: #fff;
 }
 
-  /* ------------------css for small ------------------- */
+  /* ------------------css for small screens ------------------- */
   nav .fa-solid{
     display: none;
-    
   }
+
   @supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll !important;
+    body {
+      background-attachment: scroll !important;
+    }
   }
-}
+
   @media only screen and (max-width:900px){
     #mobleimage{
         align-items: center;
         display:inline;
         width: 40%;
     }
+
     body{
         background-image: url(images/BandPhoto_small.jpg);
         background-attachment:fixed;
-        
-        
     }
+
     .header-text {
         margin-top: 25%;
         font-size: 15px;
     }
+
     .header-text h1 {
         font-size: 30px;
     }
+
     .logo{
         display: none; 
-   
     }
+
     nav .fa-solid{
-    display: block;
-    font-size: 25px;
-  }
-  nav ul{
-    z-index: 2;
-    background: #00C7FF;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding-top: 50px;
-    transition: right 0.5s;
-  }
-  nav ul li{
-    display: block;
-    margin: 25px;
-  }
-  nav ul .fa-solid{
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
-  .sub-title{
-    font-size: 30px;
-  }
-  .about-col-1, .about-col-2 {
-    flex-basis: 100%;
+        display: block;
+        font-size: 25px;
+    }
 
-  }
-  .about-col-1 img{
-    margin-bottom: 30px ;
-    width: 100%;
-  }
-  .about-col-2 h1{
-    font-size: 40px;
-  }
-  .about-col-2 p{
-    font-size: 25px;
-  }
-  .contact-left, .contact-right {
-    flex-basis: 100%;
+    nav ul{
+        z-index: 2;
+        background: #00C7FF;
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: right 0.5s;
+    }
 
-  }
-  form input, form textarea{
-    width: 75%;
-    display: inline;
-    margin-left: 10%;
-    align-items: center;
-  }
-  button{
-    display: inline;
-    align-items: center;
-    width: 75%;
-    margin: 10%;
-  }
-  #msg{
-    display: inline;
-    align-items: center;
-    margin: 20%;
-  }
- 
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
 
-    
-  
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 
+    .sub-title{
+        font-size: 30px;
+    }
 
+    .row{
+        padding: 24px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 img{
+        margin-bottom: 30px ;
+        width: 100%;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+    }
+
+    .about-col-2 h1{
+        font-size: 40px;
+    }
+
+    .about-col-2 p{
+        font-size: 25px;
+    }
+
+    .services-list,
+    .music-list{
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        margin-top: 30px;
+    }
+
+    .service-card,
+    .music-card{
+        padding: 24px;
+    }
+
+    .services-list h2{
+        font-size: 32px;
+    }
+
+    #Members .services-list img{
+        width: min(82%, 260px);
+        height: 360px;
+    }
+
+    #services .services-list img{
+        width: min(100%, 320px);
+        max-width: none;
+        height: auto;
+        max-height: 420px;
+    }
+
+    .events-hero{
+        padding: 55px 0 20px;
+    }
+
+    .events-hero h1{
+        font-size: 40px;
+    }
+
+    .events-hero p{
+        font-size: 25px;
+    }
+
+    .events-grid{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .event-card h2{
+        font-size: 32px;
+    }
+
+    .event-card img{
+        height: 230px;
+    }
+
+    .wedding-list{
+        gap: 24px;
+    }
+
+    .wedding-entry-text{
+        padding: 24px 24px 18px;
+    }
+
+    .wedding-entry-text h2{
+        font-size: 32px;
+    }
+
+    .wedding-gallery{
+        grid-template-columns: 1fr;
+        padding: 0 18px 18px;
+    }
+
+    .wedding-gallery img{
+        height: 230px;
+    }
+
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+    }
+
+    form input, form textarea{
+        width: 75%;
+        display: block;
+        margin-left: 10%;
+        align-items: center;
+    }
+
+    button{
+        display: block;
+        align-items: center;
+        width: 75%;
+        margin: 10% auto;
+    }
+
+    #msg{
+        display: block;
+        align-items: center;
+        margin: 20% auto;
+    }
   }
